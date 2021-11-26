@@ -1,8 +1,4 @@
 Bundle-Name: lugcustomformfield
 Bundle-SymbolicName: com.lug.dynamic.data.mapping.form.field.type
-Bundle-Version: 1.0.0
-Liferay-JS-Config: /META-INF/resources/config.js
-Provide-Capability:\
-	soy;\
-		type:String="LiferayFormField"
+Bundle-Version: 1.0.0 
 Web-ContextPath: /dynamic-data-lugcustomformfield-form-field
