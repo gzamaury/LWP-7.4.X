@@ -1,49 +1,13 @@
-import 'dynamic-data-mapping-form-field-type/FieldBase/FieldBase.es';
-import './lugcustomformfieldRegister.soy.js';
-import templates from './lugcustomformfield.soy.js';
-import {Config} from 'metal-state';
+import React from 'react';
+import {FieldBase} from 'dynamic-data-mapping-form-field-type/FieldBase/ReactFieldBase.es';
 
-
-/**
- * LUGCustomFormField Component
- */
-class LUGCustomFormField extends Component {
-
-	dispatchEvent(event, name, value) {
-		this.emit(name, {
-			fieldInstance: this,
-			originalEvent: event,
-			value
-		});
-	}
-
-	_handleFieldChanged(event) {
-		const {value} = event.target;
-
-		this.setState(
-			{
-				value
-			},
-			() => this.dispatchEvent(event, 'fieldEdited', value)
-		);
-	}
+const HolaMundo = (props) => {
+	console.log(props);
+	return (
+		<FieldBase {...props}>
+			<h1>Hola Mundo!!!</h1>
+		</FieldBase>
+	)
 }
 
-LUGCustomFormField.STATE = {
-
-	name: Config.string().required(),
-
-	predefinedValue: Config.oneOfType([Config.number(), Config.string()]),
-
-	required: Config.bool().value(false),
-
-	showLabel: Config.bool().value(true),
-
-	spritemap: Config.string(),
-
-	value: Config.string().value('')
-}
-
-// Register component
-Soy.register(LUGCustomFormField, templates);
-
+export default HolaMundo;
