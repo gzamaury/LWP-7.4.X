@@ -5,7 +5,7 @@ const HolaMundo = (props) => {
 	console.log(props);
 	return (
 		<FieldBase {...props}>
-			<h1>Hola Mundo!!!</h1>
+			<h1>Hola {props.sayHelloTo}!!!</h1>
 		</FieldBase>
 	)
 }
