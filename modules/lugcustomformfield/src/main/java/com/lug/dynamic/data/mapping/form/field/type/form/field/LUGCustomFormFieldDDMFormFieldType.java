@@ -16,7 +16,7 @@ import org.osgi.service.component.annotations.Reference;
 		"ddm.form.field.type.description=lugcustomformfield-description",
 		"ddm.form.field.type.display.order:Integer=13",
 		"ddm.form.field.type.group=customized",
-		"ddm.form.field.type.icon=text",
+		"ddm.form.field.type.icon=thumbs-up",
 		"ddm.form.field.type.label=lugcustomformfield-label",
 		"ddm.form.field.type.name=lugcustomformfield"
 	},
