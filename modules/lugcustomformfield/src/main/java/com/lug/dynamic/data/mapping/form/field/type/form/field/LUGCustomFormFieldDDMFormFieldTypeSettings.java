@@ -20,7 +20,7 @@ import com.liferay.dynamic.data.mapping.form.field.type.DefaultDDMFormFieldTypeS
 						@DDMFormLayoutColumn(
 							size = 12,
 							value = {
-								"label", "sayHelloTo", "required", "tip"
+								"label", "userData", "required", "tip"
 							}
 						)
 					}
@@ -47,16 +47,16 @@ import com.liferay.dynamic.data.mapping.form.field.type.DefaultDDMFormFieldTypeS
 )
 public interface LUGCustomFormFieldDDMFormFieldTypeSettings extends DefaultDDMFormFieldTypeSettings {
 	@DDMFormField(
-		label="%who-do-you-want-to-say-hello",
+		label="%username-selection-to-show",
 		optionLabels = {
-				"%ray","%alloy"
+				"%full-name","%email"
 		},
 		optionValues = {
-				"Ray","Alloy"   
+				"getFullName","getEmailAddress"
 		},
-		predefinedValue = "ray",
+		predefinedValue = "full-name",
 		required = true,
 		type = "select"
 	)
-	public String sayHelloTo();
+	public String userData();
 }
